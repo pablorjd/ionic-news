@@ -1,0 +1,25 @@
+<ion-header [translucent]="true" mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      Encabezados
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" mode="ios" class="ion-no-border">
+    <ion-toolbar>
+      <ion-title size="large">Encabezados</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Default Segment -->
+  <ion-segment (ionChange)="segmentChanged($event)" scrollable mode="md" [value]="setected">
+
+    <ion-segment-button [value]="category" *ngFor="let category of categories">
+      <ion-label class="ion-text-capitalize">{{ category }}</ion-label>
+    </ion-segment-button>
+
+  </ion-segment>
+
+</ion-content>
